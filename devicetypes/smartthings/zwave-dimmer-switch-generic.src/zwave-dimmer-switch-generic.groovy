@@ -49,6 +49,9 @@ metadata {
 		fingerprint mfr: "0300", prod: "0003", model: "0005", deviceJoinName: "ilumin Dimmable Bulb", ocfDeviceType: "oic.d.light"
 		fingerprint mfr: "0312", prod: "FF00", model: "FF04", deviceJoinName: "Minoston Smart Dimmer Switch"
 		fingerprint mfr: "0312", prod: "FF00", model: "FF02", deviceJoinName: "Minoston Toggle Dimmer Switch"
+		fingerprint mfr: "0312", prod: "AA00", model: "AA02", deviceJoinName: "Evalogik Smart Dimmer Switch"
+		fingerprint mfr: "0312", prod: "C000", model: "C002", deviceJoinName: "Evalogik Smart Plug Dimmer"
+		fingerprint mfr: "010F", prod: "1C01", model: "1000", deviceJoinName: "Fibaro Dimmer"
 	}
 
 	simulator {

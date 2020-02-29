@@ -37,6 +37,7 @@ metadata {
 		capability "Sensor"
 
 		fingerprint profileId: "0104", inClusters: "0000,0001,0003,0004,0005,0020,0201,0202,0204,0B05", outClusters: "000A, 0019",  manufacturer: "LUX", model: "KONOZ", deviceJoinName: "LUX KONOz Thermostat"
+        fingerprint profileId: "0104", inClusters: "0000,0003,0020,0201,0202,0405", outClusters: "0019, 0402", manufacturer: "Umbrela", model: "Thermostat", deviceJoinName: "Umbrela UTee"
 	}
 
 	tiles {
@@ -146,7 +147,7 @@ private parseAttrMessage(description) {
 	descMap.additionalAttrs.each {
 		attrData << [cluster: descMap.clusterInt, attribute: it.attrInt, value: it.value]
 	}
-	attrData.each {
+	attrData.findAll( {it.value != null} ).each {
 		def map = [:]
 		if (it.cluster == THERMOSTAT_CLUSTER) {
 			if (it.attribute == LOCAL_TEMPERATURE) {
